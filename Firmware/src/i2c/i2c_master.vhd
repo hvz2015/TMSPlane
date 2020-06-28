@@ -178,7 +178,7 @@ BEGIN
               state        <= StWr1;
             WHEN "001" =>
               sI2C_enable  <= '0';
-              sI2C_data_wr <= REG_ADDR;
+              sI2C_data_wr <= WR_DATA0;
               IF sI2C_busy = '0' THEN
                 state <= StWaitStart;
               ELSE
